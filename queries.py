@@ -325,7 +325,7 @@ def Q_7(cursor, conn, execution_time):
     FROM passes 
     WHERE technique = 'Through Ball' AND match_id IN (
         SELECT match_id FROM competitions INNER JOIN matches ON competitions.season_id = matches.season_id 
-        WHERE competitions.comp_name = 'La Liga' AND competitions.season_name = '2018/2019' OR competitions.season_name = '2019/2020' OR competitions.season_name = '2020/2021'
+        WHERE competitions.comp_name = 'La Liga' AND competitions.season_name = '2020/2021'
     )   
     GROUP BY player_name ORDER BY COUNT(*) DESC; """
 
@@ -349,7 +349,7 @@ def Q_8(cursor, conn, execution_time):
     FROM passes 
     WHERE technique = 'Through Ball' AND match_id IN (
         SELECT match_id FROM competitions INNER JOIN matches ON competitions.season_id = matches.season_id 
-        WHERE competitions.comp_name = 'La Liga' AND competitions.season_name = '2018/2019' OR competitions.season_name = '2019/2020' OR competitions.season_name = '2020/2021'
+        WHERE competitions.comp_name = 'La Liga' AND competitions.season_name = '2020/2021'
     )   
     GROUP BY team_name ORDER BY COUNT(*) DESC;"""
 
